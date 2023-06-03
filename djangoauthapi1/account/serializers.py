@@ -47,7 +47,7 @@ class UserChangePasswordSerializer(serializers.Serializer):
     new_password = serializers.CharField(max_length=255, style = {"input_type": "password"}, write_only=True)
     confirm_password= serializers.CharField(max_length=255, style = {"input_type": "password"}, write_only=True)
     class Meta:
-        fields = ["password", "confirm_passwordd"]
+        fields = ["new_password", "confirm_passwordd"]
 
     def validate(self, attrs):
         new_password = attrs.get("new_password")
@@ -65,7 +65,7 @@ class SendPasswordResetEmailSerializer(serializers.Serializer):
         fields = ["email"]
 
     def validate(self, attrs):
-        email = attrs.get('email')
+        email = attrs.get('email').lower()
         if User.objects.filter(email=email).exists():
             user = User.objects.get(email=email)
             uid = urlsafe_base64_encode(force_bytes(user.id))
