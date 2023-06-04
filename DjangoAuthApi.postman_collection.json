@@ -1,8 +1,8 @@
 {
 	"info": {
-		"_postman_id": "4e004a36-383b-4c97-8d98-fac2d4036055",
+		"_postman_id": "67311076-fa69-4366-b43a-94cc11d78183",
 		"name": "DjangoAuthApi",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "27614260"
 	},
 	"item": [
@@ -19,30 +19,14 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\":\"mona@example.com\",\r\n    \"name\":\"Mona\",\r\n    \"password\":\"123456\",\r\n    \"password2\":\"123456\",\r\n    \"tc\":\"True\"\r\n\r\n}",
+					"raw": "{\r\n\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/user/register/",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"user",
-						"register",
-						""
-					]
-				}
+				"url": "http://127.0.0.1:8000/api/v1/user/register/"
 			},
 			"response": []
 		},
@@ -59,30 +43,14 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\":\"mona@example.com\",\r\n    \"password\":\"12345689\"\r\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/user/login/",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"user",
-						"login",
-						""
-					]
-				}
+				"url": "http://127.0.0.1:8000/api/v1/user/login/"
 			},
 			"response": []
 		},
@@ -102,23 +70,7 @@
 						"type": "text"
 					}
 				],
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/user/profile/",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"user",
-						"profile",
-						""
-					]
-				}
+				"url": "http://127.0.0.1:8000/api/user/profile/"
 			},
 			"response": []
 		},
@@ -147,23 +99,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/user/changepassword/",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"user",
-						"changepassword",
-						""
-					]
-				}
+				"url": "http://127.0.0.1:8000/api/user/changepassword/"
 			},
 			"response": []
 		},
@@ -180,7 +116,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\":\"mona@example.com\"\r\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -188,7 +124,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/user/send-reset-password-email/",
+					"raw": "http://127.0.0.1:8000/api/v1/user/send-reset-password-email/",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -199,6 +135,7 @@
 					"port": "8000",
 					"path": [
 						"api",
+						"v1",
 						"user",
 						"send-reset-password-email",
 						""
@@ -225,23 +162,7 @@
 						"type": "text"
 					}
 				],
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/user/reset-password/",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"user",
-						"reset-password",
-						""
-					]
-				}
+				"url": "http://127.0.0.1:8000/api/user/reset-password/"
 			},
 			"response": []
 		}
